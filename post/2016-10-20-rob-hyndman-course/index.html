@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lectures notes">
+  <meta name="generator" content="Hugo 0.25.1" />
+
+  <title>Lecture notes to the forecast course &middot; First - PhD</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://ms314u.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://ms314u.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://ms314u.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://ms314u.github.ioimg/favicon.ico" type="image/x-icon" />
+
+  
+    <link rel="stylesheet" href="http://ms314u.github.iocss/my.css">
+  
+  
+    <script src="http://ms314u.github.iojs/my.js"></script>
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://ms314u.github.io/">Think ML</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://ms314u.github.io/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://ms314u.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://ms314u.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://ms314u.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/*" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Lecture notes to the forecast course</h1>
+  <h2>Lectures notes</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 Oct 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  
+
+<h2 id="forecasting-course-by-rob-hyndman-in-tu-e-october-19-21-2016-1-http-robjhyndman-com-eindhoven">Forecasting course by Rob Hyndman in (TU/e, October 19-21, 2016) <a href="http://robjhyndman.com/eindhoven/">1</a>.</h2>
+
+<p>Requred packages</p>
+
+<pre><code class="language-R">library(fpp)
+library(ggplot2)
+library(magrittr)
+library(readxl)
+library(thief)
+library(knitr)
+</code></pre>
+
+<p>Considered models are good for cyclic/seasonal
+data.  Plot ACF/PCF to check seasonality.
+Lecture&rsquo;s slides [1] are extremely useful.</p>
+
+<h2 id="arima-learning-procedure">ARIMA learning procedure</h2>
+
+<p>To learn coefficient&rsquo;s values a non-linear optimization to maximize likelihood is used.</p>
+
+<p><img src="http://ms314u.github.io/img/2016/arima-learn-mle.PNG" width="500" height="370"/></p>
+
+<p>To find p,d,q orders of ARIMA(p,d,q) the R command auto.arima() is used.</p>
+
+<p><img src="http://ms314u.github.io/img/2016/arima-learn-auto-arima.PNG" width="500" height="370"/></p>
+
+<p>AIC/BIC criterya is used to choose the best model.</p>
+
+<p><img src="http://ms314u.github.io/img/2016/arima-learn-aic.PNG" width="500" height="370"/></p>
+
+<h2 id="why-long-term-forecasts-better-than-baseline-approach-are-hardly-possible">Why long-term forecasts better than baseline approach are hardly possible</h2>
+
+<p>It&rsquo;s might be obvious but this is what I realized
+while listening  this course.</p>
+
+<p>Coefficients of the ARIMA model learned from the
+data has some uncertainty in their estimation.</p>
+
+<p>Once we choose some fixed set of coefficients to
+make a forecast we use some particular realization
+of the model out of many possible models.</p>
+
+<p>Of course while learning/optimization we
+restricted the total number of models but still,
+if standard deviations of coefficients are not
+very small confidence intervals will grow quickly.</p>
+
+<p>Alternatively we could use several possible models (for
+each possible set of coefficients) to make
+predictions ans then average them.</p>
+
+<p>At the end, in case of long term prediction, we
+will obtain the result very similar to the
+baseline (last observation or mean value).</p>
+
+<p>You can find an example of learned ARIM model in file &ldquo;2-4-NonseasonalARIMA.pdf&rdquo;.<br />
+Input data looks like this:</p>
+
+<p><img src="http://ms314u.github.io/img/2016/us-consumption-data.PNG" width="500" height="370"/></p>
+
+<pre><code>&gt; (fit &lt;- auto.arima(usconsumption[,1], seasonal=FALSE))
+
+Series: usconsumption[, 1]
+ARIMA(0,0,3) with non-zero mean
+
+Coefficients:
+        ma1     ma2      ma3   intercept
+     0.2542  0.2260   0.2695   0.7562
+s.e. 0.0767  0.0779   0.0692   0.0844
+
+sigma^2 estimated as 0.3953: log likelihood=-154.73
+AIC=319.46 AICc=319.84 BIC=334.96
+
+</code></pre>
+
+<p>The discovered model is ARIMA(0,0,3) or MA(3) model:</p>
+
+<pre><code>yt = 0.756 + e_{t} + 0.254e_{t-1} + 0.226e_{t-2} + 0.269e_{t-3},
+</code></pre>
+
+<p>where e_t is a white noise with standard deviation 0.63 = sqrt(0.3953).
+Corresponding forecast plot:</p>
+
+<p><img src="http://ms314u.github.io/img/2016/us-consumption-forecast.PNG" width="500" height="370"/></p>
+
+<p>Now, what is the best model to make a long-term prediction?</p>
+
+<p>Since if we use exactly learned model then we have
+chosen one model out of many many realisations
+(see std deviations of coefficients). So, the best
+choise is to use just average level for long-term
+forecast.</p>
+
+<p>Let&rsquo;s say that using ACF plot we identified the
+random walk model.
+To do prediction we would use the last
+observation, not the RW model. Because we will use
+some particular realization while it is more safe
+to use averaged model over all possible
+realisations which in this case is the last observation.</p>
+
+<h2 id="cross-validation">Cross validation</h2>
+
+<p>Is considered in &ldquo;3-1-Cross-validation.pdf&rdquo;.</p>
+
+<p>Minimizing the AIC is asymptotically equivalent to minimizing MSE via one-step cross-validation.  (Akaike, 1969, 1973).</p>
+
+<p><img src="http://ms314u.github.io/img/2016/ts-cross-validation1.PNG" width="500" height="370"/></p>
+
+<p><img src="http://ms314u.github.io/img/2016/ts-cross-validation2.PNG" width="500" height="370"/></p>
+
+<h2 id="complex-seasonality">Complex seasonality</h2>
+
+<p>TBATS model [2], [3].</p>
+
+<p><img src="http://ms314u.github.io/img/2016/tbats-model.PNG" width="500" height="370"/></p>
+
+<p>Forecast example using TBATS.</p>
+
+<p><img src="http://ms314u.github.io/img/2016/tbats-forecast-example.PNG" width="500" height="370"/></p>
+
+<p><img src="http://ms314u.github.io/img/2016/tbats-forecast-example2.PNG" width="500" height="370"/></p>
+
+<p><img src="http://ms314u.github.io/img/2016/tbats-forecast-example3.PNG" width="500" height="370"/></p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li>[1] <a href="http://robjhyndman.com/eindhoven/">http://robjhyndman.com/eindhoven/</a></li>
+<li>[2] &ldquo;Forecasting Time Series With Complex Seasonal Patterns Using Exponential Smoothing&rdquo; A.M.De Livera and R.J.Hyndman, R.D.Snyder</li>
+<li>[3] <a href="http://robjhyndman.com/papers/complex-seasonality/">http://robjhyndman.com/papers/complex-seasonality/</a></li>
+<li>[4] <a href="https://forecasters.org/">International Institute of Forecasters</a></li>
+<li>[5] <a href="http://www.journals.elsevier.com/international-journal-of-forecasting">International Journal of Forecasting</a><br /></li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://ms314u.github.io/post/mathjax/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://ms314u.github.io/post/mathjax/">MathJax test</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://ms314u.github.iojs/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking ID', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>First - PhD</title>
+    <link>http://ms314u.github.io/</link>
+    <description>Recent content on First - PhD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 20 Oct 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ms314u.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lecture notes to the forecast course</title>
+      <link>http://ms314u.github.io/post/2016-10-20-rob-hyndman-course/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ms314u.github.io/post/2016-10-20-rob-hyndman-course/</guid>
+      <description>Forecasting course by Rob Hyndman in (TU/e, October 19-21, 2016) 1. Requred packages
+library(fpp) library(ggplot2) library(magrittr) library(readxl) library(thief) library(knitr)  Considered models are good for cyclic/seasonal data. Plot ACF/PCF to check seasonality. Lecture&amp;rsquo;s slides [1] are extremely useful.
+ARIMA learning procedure To learn coefficient&amp;rsquo;s values a non-linear optimization to maximize likelihood is used.
+To find p,d,q orders of ARIMA(p,d,q) the R command auto.arima() is used.
+AIC/BIC criterya is used to choose the best model.</description>
+    </item>
+    
+    <item>
+      <title>MathJax test</title>
+      <link>http://ms314u.github.io/post/mathjax/</link>
+      <pubDate>Sun, 02 Oct 2016 12:45:22 +0200</pubDate>
+      
+      <guid>http://ms314u.github.io/post/mathjax/</guid>
+      <description>Hei y Nulla eget ante vel ex dictum condimentum ac quis neque. Vestibulum ornare nisl laoreet eros molestie, aliquam condimentum nulla posuere. Nulla elit lacus, porta nec arcu ac, consectetur dapibus erat. Cras dui nulla, mattis ac consequat quis, mattis condimentum libero. Fusce eget commodo augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget ante vel ex dictum condimentum ac quis neque. Vestibulum ornare nisl laoreet eros molestie, aliquam condimentum nulla posuere.</description>
+    </item>
+    
+  </channel>
+</rss>
