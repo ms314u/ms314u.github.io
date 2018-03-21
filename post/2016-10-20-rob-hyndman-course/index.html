@@ -21,13 +21,13 @@
   <!--<![endif]-->
 
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="http://ms314u.github.io/css/side-menu-old-ie.css">
+  <link rel="stylesheet" href="https://ms314u.github.io/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="http://ms314u.github.io/css/side-menu.css">
+  <link rel="stylesheet" href="https://ms314u.github.io/css/side-menu.css">
   <!--<![endif]-->
 
-  <link rel="stylesheet" href="http://ms314u.github.io/css/blackburn.css">
+  <link rel="stylesheet" href="https://ms314u.github.io/css/blackburn.css">
 
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,13 +48,13 @@
   <script>hljs.initHighlightingOnLoad();</script>
   
 
-  <link rel="shortcut icon" href="http://ms314u.github.ioimg/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://ms314u.github.ioimg/favicon.ico" type="image/x-icon" />
 
   
-    <link rel="stylesheet" href="http://ms314u.github.iocss/my.css">
+    <link rel="stylesheet" href="https://ms314u.github.iocss/my.css">
   
   
-    <script src="http://ms314u.github.iojs/my.js"></script>
+    <script src="https://ms314u.github.iojs/my.js"></script>
   
 
 </head>
@@ -71,7 +71,7 @@
 <div id="menu">
 
   
-  <a class="pure-menu-heading brand" href="http://ms314u.github.io/">Think ML</a>
+  <a class="pure-menu-heading brand" href="https://ms314u.github.io/">Think ML</a>
 
 
   <div class="pure-menu">
@@ -79,25 +79,25 @@
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="http://ms314u.github.io/"><i class='fa fa-list fa-fw'></i>Posts</a>
+          <a class="pure-menu-link" href="https://ms314u.github.io/"><i class='fa fa-list fa-fw'></i>Posts</a>
       
         </li>
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="http://ms314u.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+          <a class="pure-menu-link" href="https://ms314u.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
       
         </li>
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="http://ms314u.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+          <a class="pure-menu-link" href="https://ms314u.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
       
         </li>
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="http://ms314u.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+          <a class="pure-menu-link" href="https://ms314u.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
       
         </li>
       
@@ -248,15 +248,15 @@ Lecture&rsquo;s slides [1] are extremely useful.</p>
 
 <p>To learn coefficient&rsquo;s values a non-linear optimization to maximize likelihood is used.</p>
 
-<p><img src="http://ms314u.github.io/img/2016/arima-learn-mle.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/arima-learn-mle.PNG" width="500" height="370"/></p>
 
 <p>To find p,d,q orders of ARIMA(p,d,q) the R command auto.arima() is used.</p>
 
-<p><img src="http://ms314u.github.io/img/2016/arima-learn-auto-arima.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/arima-learn-auto-arima.PNG" width="500" height="370"/></p>
 
 <p>AIC/BIC criterya is used to choose the best model.</p>
 
-<p><img src="http://ms314u.github.io/img/2016/arima-learn-aic.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/arima-learn-aic.PNG" width="500" height="370"/></p>
 
 <h2 id="why-long-term-forecasts-better-than-baseline-approach-are-hardly-possible">Why long-term forecasts better than baseline approach are hardly possible</h2>
 
@@ -286,7 +286,7 @@ baseline (last observation or mean value).</p>
 <p>You can find an example of learned ARIM model in file &ldquo;2-4-NonseasonalARIMA.pdf&rdquo;.<br />
 Input data looks like this:</p>
 
-<p><img src="http://ms314u.github.io/img/2016/us-consumption-data.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/us-consumption-data.PNG" width="500" height="370"/></p>
 
 <pre><code>&gt; (fit &lt;- auto.arima(usconsumption[,1], seasonal=FALSE))
 
@@ -311,7 +311,7 @@ AIC=319.46 AICc=319.84 BIC=334.96
 <p>where e_t is a white noise with standard deviation 0.63 = sqrt(0.3953).
 Corresponding forecast plot:</p>
 
-<p><img src="http://ms314u.github.io/img/2016/us-consumption-forecast.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/us-consumption-forecast.PNG" width="500" height="370"/></p>
 
 <p>Now, what is the best model to make a long-term prediction?</p>
 
@@ -335,23 +335,23 @@ realisations which in this case is the last observation.</p>
 
 <p>Minimizing the AIC is asymptotically equivalent to minimizing MSE via one-step cross-validation.  (Akaike, 1969, 1973).</p>
 
-<p><img src="http://ms314u.github.io/img/2016/ts-cross-validation1.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/ts-cross-validation1.PNG" width="500" height="370"/></p>
 
-<p><img src="http://ms314u.github.io/img/2016/ts-cross-validation2.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/ts-cross-validation2.PNG" width="500" height="370"/></p>
 
 <h2 id="complex-seasonality">Complex seasonality</h2>
 
 <p>TBATS model [2], [3].</p>
 
-<p><img src="http://ms314u.github.io/img/2016/tbats-model.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/tbats-model.PNG" width="500" height="370"/></p>
 
 <p>Forecast example using TBATS.</p>
 
-<p><img src="http://ms314u.github.io/img/2016/tbats-forecast-example.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/tbats-forecast-example.PNG" width="500" height="370"/></p>
 
-<p><img src="http://ms314u.github.io/img/2016/tbats-forecast-example2.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/tbats-forecast-example2.PNG" width="500" height="370"/></p>
 
-<p><img src="http://ms314u.github.io/img/2016/tbats-forecast-example3.PNG" width="500" height="370"/></p>
+<p><img src="https://ms314u.github.io/img/2016/tbats-forecast-example3.PNG" width="500" height="370"/></p>
 
 <h1 id="references">References</h1>
 
@@ -368,13 +368,13 @@ realisations which in this case is the last observation.</p>
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="http://ms314u.github.io/post/mathjax/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://ms314u.github.io/post/mathjax/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="http://ms314u.github.io/post/mathjax/">MathJax test</a>
+      <a href="https://ms314u.github.io/post/mathjax/">MathJax test</a>
     </nav>
     
   </div>
@@ -415,7 +415,7 @@ realisations which in this case is the last observation.</p>
 
 </div>
 </div>
-<script src="http://ms314u.github.iojs/ui.js"></script>
+<script src="https://ms314u.github.iojs/ui.js"></script>
 
 
 <script>
